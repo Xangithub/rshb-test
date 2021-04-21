@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.app.bank.domain.Account;
 import ru.app.bank.repository.AccountRepository;
-import ru.app.bank.repository.JournalRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -29,8 +28,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public List<Account> readAllAccount() {
-        List<Account> accountRepositoryAll = accountRepository.findAll();
-        return accountRepositoryAll;
+       return accountRepository.findAll();
     }
 
     @Override
